@@ -1,7 +1,10 @@
 const express = require("express");
+// use the body-parser to use inputs from form to
 const bodyParser = require("body-parser");
 
 const app = express();
+app.use(bodyParser.urlencoded({extended: true}));// to post nested objects
+
 
 app.get("/", function(req, res) {
     // a Respond to display on the browser
@@ -9,7 +12,12 @@ app.get("/", function(req, res) {
 });
 
 app.post("/", function(req, res){
-    res.send(`Thank you`);
+    // console.log(req.body); will display the parsed input from the html form
+
+    let num1 = req.body.num1;
+    let num2 = req.body.num2;
+    let result = Number(num1) + Number(num2);
+    res.send(`Thank you, the result of your calculation is ${result}`);
 })
 
 
