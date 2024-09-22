@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Mark-Eugene-Barasu/Calculator_Express#readme",
   "dependencies": {
+    "body-parser": "^1.20.3",
     "express": "^4.21.0"
   }
 }
