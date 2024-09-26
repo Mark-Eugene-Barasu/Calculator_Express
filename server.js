@@ -21,8 +21,8 @@ app.post("/", function(req, res) {
 
     console.log(`bmi is : ${bmiResult}`)
     res.send(`the result is in \nYour BMI is: ${bmiResult}`);    
-})
+});
 
 app.listen(3000, function(){
     console.log(`server is running on port: 3000`);
-})
+});
